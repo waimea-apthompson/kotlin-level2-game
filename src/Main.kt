@@ -42,7 +42,9 @@ showboreod()
             'S' ->swap()
             
         }
-        break
+
+
+break
     }
 
 
@@ -104,25 +106,27 @@ fun playername(){
 }
 
 fun player1answer(): Char{
-    println("what you what to do white?".col(77,1,3))
-    println("move [L]eft".col(88,1,99))
+    println("what you what to do white?".col(555,99,4343))
+    println("move [L]eft".col(555,99,4343))
     println("move [R]ight".col(555,99,4343))
-    println("[S]wap".col(63,88,36))
+    println("[S]wap".col(555,99,4343))
     println()
     val goodchoise = listOf("L, R, S")
     while (true) {
         print("chosie: ")
         val choice = readlnOrNull()?.firstOrNull()
         if (choice != null) return choice
+
     }
 
 }
 
+
 fun player2answer(): Char{
-    println("what you what to do white?")
-    println("move [L]eft")
+    println("what you what to do black?".col(22,777,99))
+    println("move [L]eft".col(22,777,99))
     println("move [R]ight".col(22,777,99))
-    println("[S]wap")
+    println("[S]wap".col(22,777,99))
     println()
     val goodchoise = listOf("L, R, S")
     while (true) {
