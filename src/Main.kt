@@ -13,8 +13,11 @@
 
 
 val squares = mutableListOf<String>()
-val p2n = String
-val p1n = String
+var p2n = " "
+var p1n = " "
+var lowbored = 0
+var highbored = 14
+var playerconter = 0
 fun main() {
     println("=================".col(159, 235, 665))
     println("=               =".col(159, 235, 665))
@@ -35,7 +38,7 @@ fun whatplayer1do() {
 
     while (true) {
         val action = player1answer()
-
+        playerconter ++
         when (action) {
 
             'L' -> left()
@@ -56,7 +59,7 @@ fun whatplayer1do() {
 fun whatplayer2do() {
     while (true) {
         val action2 = player2answer()
-
+        playerconter --
         when (action2) {
 
             'L' -> left()
@@ -66,6 +69,7 @@ fun whatplayer2do() {
             'S' -> swap()
         }
         boreadshrink()
+        showboreod()
 whatplayer1do()
 
 
@@ -103,28 +107,28 @@ fun showboreod(){
 
 fun playername(){
 
-    println("player one what  your name?".col(159,235,665))
-    var p1n = readln()
+    println("player one what is your name?".col(159,235,665))
+    p1n = readln()
 
-    println("what a dumb ass name, o and you are white:) aka w".col(159,235,665))
+    println("what a dumb ass name, oh and you are white:) aka w".col(159,235,665))
     println()
     println("player two surely you have a better name?".col(159,235,665))
-    var p2n = readln()
+    p2n = readln()
 
-    println("dam it some how worse!, o u black:( aka b".col(159,235,665))
+    println("dam it some how worse!, oh u black:( aka b".col(159,235,665))
 }
 
 fun player1answer(): Char{
-    println("what you what to do white?".col(555,99,4343))
+    println("what you want to do $p1n?".col(555,99,4343))
     println("move [L]eft".col(555,99,4343))
     println("move [R]ight".col(555,99,4343))
     println("[S]wap".col(555,99,4343))
     println()
     val goodchoise = listOf("L, R, S")
     while (true) {
-        print("chosie: ".col(555,99,4343))
+        print("choose: ".col(555,99,4343))
         val choice = readlnOrNull()?.firstOrNull()
-        if (choice != null) return choice
+       if (choice != null) return choice
 
     }
 
@@ -132,14 +136,14 @@ fun player1answer(): Char{
 
 
 fun player2answer(): Char{
-    println("what you what to do black?".col(22,777,99))
+    println("what you want to do $p2n?".col(22,777,99))
     println("move [L]eft".col(22,777,99))
     println("move [R]ight".col(22,777,99))
     println("[S]wap".col(22,777,99))
     println()
     val goodchoise = listOf("L, R, S")
     while (true) {
-        print("chosie: ".col(22,777,99))
+        print("choose: ".col(22,777,99))
         val choice = readlnOrNull()?.firstOrNull()
         if (choice != null) return choice
     }
@@ -155,12 +159,24 @@ fun setupconters(){
     squares[5] = p2Con
 }
 fun swap(){
-println("switch pick 1".col(13,551,161))
-    val cont1 = readln().toInt() - 1
+    while (true) {
+        println("switch pick 1".col(13, 551, 161))
+        val cont1 = readln().toInt() - 1
 
-    println("switch pick 2".col(13,551,161))
-    val cont2 = readln().toInt() - 1
-
+        println("switch pick 2".col(13, 551, 161))
+        val cont2 = readln().toInt() - 1
+        if (squares[cont1] == ".") {
+            println("invalid move")
+        }
+        if (playerconter = 0) {
+            showboreod()
+            whatplayer2do()
+        } else {
+            showboreod()
+            whatplayer1do()
+        }
+        break
+    }
     val place1 = squares[cont1 ]
     val place2 = squares[cont2 ]
 
@@ -172,8 +188,27 @@ println("switch pick 1".col(13,551,161))
 }
 
 fun right(){
-println("what one do u what to move to the right?".col(92,741,32))
-    val cont1 = readln().toInt() - 1
+    var cont1 = 0
+
+    while (true) {
+        println("what one do u want to move to the right?".col(743, 62, 88))
+        cont1 = readln().toInt() - 1
+        if (squares[cont1 + 1] != ".") {
+
+            println("invalid move".col(743, 62, 88))
+
+            if (playerconter == 0) {
+                showboreod()
+                whatplayer2do()
+            }
+            else {
+                showboreod()
+                whatplayer1do()
+            }
+        }
+
+        break
+    }
 
     val cont2 = cont1 + 1
 
@@ -189,9 +224,27 @@ println()
 
 
 fun left(){
-    println("what one do u what to move to the left?".col(743,62,88))
-    val cont1 = readln().toInt() - 1
+    var cont1 = 0
 
+    while (true) {
+        println("what one do u want to move to the left?".col(743, 62, 88))
+        cont1 = readln().toInt() - 1
+        if (squares[cont1 - 1] != ".") {
+
+            println("invalid move".col(743, 62, 88))
+
+            if (playerconter == 0) {
+                showboreod()
+                whatplayer2do()
+            }
+            else {
+                showboreod()
+                whatplayer1do()
+            }
+        }
+
+        break
+    }
     val cont2 = cont1 - 1
 
     val place1 = squares[cont1 ]
@@ -206,5 +259,10 @@ fun left(){
 }
 
 fun boreadshrink(){
-println("boread will shrink")
+println("board will shrink")
+
+    squares[highbored] = "x ".blue()
+    highbored --
+    squares[lowbored] = "x ".blue()
+    lowbored ++
 }
