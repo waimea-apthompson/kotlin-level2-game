@@ -110,12 +110,12 @@ fun playername(){
     println("player one what is your name?".col(159,235,665))
     p1n = readln()
 
-    println("what a dumb ass name, oh and you are white:) aka w".col(159,235,665))
+    println("what a dumb ass name, oh and you are Purple:) aka w".col(159,235,665))
     println()
     println("player two surely you have a better name?".col(159,235,665))
     p2n = readln()
 
-    println("dam it some how worse!, oh u black:( aka b".col(159,235,665))
+    println("dam it some how worse!, oh u Green:( aka b".col(159,235,665))
 }
 
 fun player1answer(): Char{
@@ -149,8 +149,8 @@ fun player2answer(): Char{
     }
 }
 fun setupconters(){
-    val p1Con = "w ".col(555,99,4343)
-    val p2Con = "b ".col(22,777,99)
+    val p1Con = "p ".col(555,99,4343)
+    val p2Con = "g ".col(22,777,99)
     squares[6] = p1Con
     squares[4] = p1Con
     squares[8] = p1Con
@@ -158,34 +158,51 @@ fun setupconters(){
     squares[7] = p2Con
     squares[5] = p2Con
 }
-fun swap(){
+fun swap() {
+    var cont1 = 0
+    var cont2 = 0
     while (true) {
-        println("switch pick 1".col(13, 551, 161))
-        val cont1 = readln().toInt() - 1
+        print("switch pick 1 : ".col(13, 551, 161))
+        cont1 = readln().toInt() - 1
 
-        println("switch pick 2".col(13, 551, 161))
-        val cont2 = readln().toInt() - 1
-        if (squares[cont1] == ".") {
+        if (squares[cont1] == "." || squares[cont1] == "x") {
             println("invalid move")
-        }
-        if (playerconter = 0) {
-            showboreod()
-            whatplayer2do()
-        } else {
-            showboreod()
-            whatplayer1do()
-        }
-        break
+            continue
+        } else break
     }
+
+    while (true) {
+        print("switch pick 2 : ".col(13, 551, 161))
+        cont2 = readln().toInt() - 1
+
+        if (squares[cont2] == "." || squares[cont2] == "x") {
+            println("invalid move")
+            continue
+        } else break
+    }
+
+
+
     val place1 = squares[cont1 ]
     val place2 = squares[cont2 ]
 
 
     squares[cont1 ] = place2
     squares[cont2 ] = place1
-    println()
-    showboreod()
+        println()
+        showboreod()
+
+
 }
+
+//    if (playerconter == 0) {
+//        showboreod()
+//        whatplayer2do()
+//    } else {
+//        showboreod()
+//        whatplayer1do()
+//    }
+
 
 fun right(){
     var cont1 = 0
