@@ -18,6 +18,8 @@ var p1n = " "
 var lowbored = 0
 var highbored = 14
 var playerconter = 0
+var chikinedinner = 0
+var done = 0
 fun main() {
     println("=================".col(159, 235, 665))
     println("=               =".col(159, 235, 665))
@@ -37,6 +39,8 @@ fun main() {
 fun whatplayer1do() {
 
     while (true) {
+        if (done == 1)
+            break
         val action = player1answer()
         playerconter ++
         when (action) {
@@ -57,7 +61,10 @@ fun whatplayer1do() {
 
 
 fun whatplayer2do() {
+
     while (true) {
+        if (done == 1)
+            break
         val action2 = player2answer()
         playerconter --
         when (action2) {
@@ -195,13 +202,7 @@ fun swap() {
 
 }
 
-//    if (playerconter == 0) {
-//        showboreod()
-//        whatplayer2do()
-//    } else {
-//        showboreod()
-//        whatplayer1do()
-//    }
+
 
 
 fun right(){
@@ -276,10 +277,25 @@ fun left(){
 }
 
 fun boreadshrink(){
-println("board will shrink")
+println("board will shrink".col(888,99,71))
 
     squares[highbored] = "x ".blue()
     highbored --
     squares[lowbored] = "x ".blue()
     lowbored ++
+
+    chikinedinner ++
+    if (chikinedinner == 7){
+        winnerwinner()
+    }
+}
+
+fun winnerwinner(){
+
+    if (squares[9] == "p")
+        println("well done $p1n you smart ass ".col(555,99,4343))
+
+    else
+        println("good boy/girl $p2n you the best".col(22,777,99))
+    done ++
 }
