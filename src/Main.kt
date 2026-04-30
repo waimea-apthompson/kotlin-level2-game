@@ -20,7 +20,42 @@ var highbored = 14
 var playerconter = 0
 var chikinedinner = 0
 var done = 0
+
+
+//my sick ass title
+
 fun main() {
+    println("The Squeeze \uD83D\uDDDC\uFE0F \n" +
+            "\n" +
+            "Game Setup \n" +
+            "\n" +
+            "A row of 15 squares, numbered 1 to 15 from left to right \n" +
+            "\n" +
+            "Player 1 places 3 counters at squares 5, 7, and 9 \n" +
+            "\n" +
+            "Player 2 places 3 counters at squares 6, 8, and 10 \n" +
+            "\n" +
+            "Decide who goes first \n" +
+            "\n" +
+            "Gameplay \n" +
+            "\n" +
+            "Players take turns. You may not skip your turn \n" +
+            "\n" +
+            "On your turn you must do exactly one of the following: \n" +
+            "\n" +
+            "Move one of your counters exactly one square left or right into an empty square \n" +
+            "\n" +
+            "Swap one of your counters with an adjacent opponent counter, moving your counter into their square and their counter into yours, but… \n" +
+            "\n" +
+            "You may not swap an opponent counter into a danger zone square (the end squares) \n" +
+            "\n" +
+            "After both players have taken their turn, the board shrinks - the square at each end is removed. Any counter on a removed square is ‘crushed’ and eliminated \n" +
+            "\n" +
+            "Win Condition \n" +
+            "\n" +
+            "The last player with at least one counter remaining on the board wins ")
+    println()
+    println()
     println("=================".col(159, 235, 665))
     println("=               =".col(159, 235, 665))
     println("= the squeeze   =".col(159, 235, 665))
@@ -51,6 +86,11 @@ fun whatplayer1do() {
 
             'S' -> swap()
 
+            'l' -> left()
+
+            'r' -> right()
+
+            's' -> swap()
         }
         whatplayer2do()
 
@@ -74,6 +114,12 @@ fun whatplayer2do() {
             'R' -> right()
 
             'S' -> swap()
+
+            'l' -> left()
+
+            'r' -> right()
+
+            's' -> swap()
         }
         boreadshrink()
         showboreod()
@@ -85,7 +131,7 @@ whatplayer1do()
 
 
 
-
+//makes the 15 sqaures
 fun creatbored(){
     while (squares.size < 15) {
         squares.add  (".")
@@ -93,7 +139,7 @@ fun creatbored(){
     }
 }
 
-
+//design and show the boread
 fun showboreod(){
 
 
@@ -117,12 +163,12 @@ fun playername(){
     println("player one what is your name?".col(159,235,665))
     p1n = readln()
 
-    println("what a dumb ass name, oh and you are Purple:) aka w".col(159,235,665))
+    println("what a dumb ass name, oh and you are Purple:) aka p".col(159,235,665))
     println()
     println("player two surely you have a better name?".col(159,235,665))
     p2n = readln()
 
-    println("dam it some how worse!, oh u Green:( aka b".col(159,235,665))
+    println("dam it some how worse!, oh u Green:( aka g".col(159,235,665))
 }
 
 fun player1answer(): Char{
@@ -131,7 +177,7 @@ fun player1answer(): Char{
     println("move [R]ight".col(555,99,4343))
     println("[S]wap".col(555,99,4343))
     println()
-    val goodchoise = listOf("L, R, S")
+    val goodchoise = listOf("L, R, S, l, r, s")
     while (true) {
         print("choose: ".col(555,99,4343))
         val choice = readlnOrNull()?.firstOrNull()
@@ -148,7 +194,7 @@ fun player2answer(): Char{
     println("move [R]ight".col(22,777,99))
     println("[S]wap".col(22,777,99))
     println()
-    val goodchoise = listOf("L, R, S")
+    val goodchoise = listOf("L, R, S, l, r, s")
     while (true) {
         print("choose: ".col(22,777,99))
         val choice = readlnOrNull()?.firstOrNull()
@@ -158,6 +204,7 @@ fun player2answer(): Char{
 fun setupconters(){
     val p1Con = "p ".col(555,99,4343)
     val p2Con = "g ".col(22,777,99)
+    //where p and g conters go
     squares[6] = p1Con
     squares[4] = p1Con
     squares[8] = p1Con
@@ -165,6 +212,7 @@ fun setupconters(){
     squares[7] = p2Con
     squares[5] = p2Con
 }
+//swap two conters
 fun swap() {
     var cont1 = 0
     var cont2 = 0
@@ -204,7 +252,7 @@ fun swap() {
 
 
 
-
+//move right
 fun right(){
     var cont1 = 0
 
@@ -240,7 +288,7 @@ println()
     showboreod()
 }
 
-
+//move left
 fun left(){
     var cont1 = 0
 
@@ -275,7 +323,7 @@ fun left(){
     showboreod()
 
 }
-
+// this shrekins the boread with x
 fun boreadshrink(){
 println("board will shrink".col(888,99,71))
 
@@ -289,12 +337,12 @@ println("board will shrink".col(888,99,71))
         winnerwinner()
     }
 }
-
+//show who won
 fun winnerwinner(){
-
+//if purple win
     if (squares[9] == "p")
         println("well done $p1n you smart ass ".col(555,99,4343))
-
+//if green win
     else
         println("good boy/girl $p2n you the best".col(22,777,99))
     done ++
