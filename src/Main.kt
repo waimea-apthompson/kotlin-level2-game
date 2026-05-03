@@ -25,35 +25,6 @@ var done = 0
 //my sick ass title
 
 fun main() {
-    println("The Squeeze \uD83D\uDDDC\uFE0F \n" +
-            "\n" +
-            "Game Setup \n" +
-            "\n" +
-            "A row of 15 squares, numbered 1 to 15 from left to right \n" +
-            "\n" +
-            "Player 1 places 3 counters at squares 5, 7, and 9 \n" +
-            "\n" +
-            "Player 2 places 3 counters at squares 6, 8, and 10 \n" +
-            "\n" +
-            "Decide who goes first \n" +
-            "\n" +
-            "Gameplay \n" +
-            "\n" +
-            "Players take turns. You may not skip your turn \n" +
-            "\n" +
-            "On your turn you must do exactly one of the following: \n" +
-            "\n" +
-            "Move one of your counters exactly one square left or right into an empty square \n" +
-            "\n" +
-            "Swap one of your counters with an adjacent opponent counter, moving your counter into their square and their counter into yours, but… \n" +
-            "\n" +
-            "You may not swap an opponent counter into a danger zone square (the end squares) \n" +
-            "\n" +
-            "After both players have taken their turn, the board shrinks - the square at each end is removed. Any counter on a removed square is ‘crushed’ and eliminated \n" +
-            "\n" +
-            "Win Condition \n" +
-            "\n" +
-            "The last player with at least one counter remaining on the board wins ")
     println()
     println()
     println("=================".col(159, 235, 665))
