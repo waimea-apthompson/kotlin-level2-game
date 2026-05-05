@@ -23,7 +23,7 @@ Terminology:
 
 to sawp the two conters and keep them there
 
----![doing swap1.gif](..%2F..%2F..%2Fprogramming-commenting-testing%2Fdocs%2Fscreenshots%2Fdoing%20swap1.gif)
+---
 
 ## Example Test Name
 
@@ -37,7 +37,7 @@ lower and uper case
 
 the lower case and upper case should work if i do both at diffirt times
 
----![lower and uppercase.gif](..%2F..%2F..%2Fprogramming-commenting-testing%2Fdocs%2Fscreenshots%2Flower%20and%20uppercase.gif)
+---
 
 
 ## test name
@@ -49,35 +49,88 @@ i what to see that if i go a way that blocked it wont work
 ## expeted resault
 it should say invaled and redo there move
 
----![cant go if blocked.gif](..%2F..%2F..%2Fprogramming-commenting-testing%2Fdocs%2Fscreenshots%2Fcant%20go%20if%20blocked.gif)
+---
 
 
 ## test name
 cant move into a x
 
 ## test data
-it must not move into where a x is
+it must not move into where a x is - boundy
 
 ## epxted resualt
 it should work and redo there move
 
----![cant move into a x.gif](..%2F..%2F..%2Fprogramming-commenting-testing%2Fdocs%2Fscreenshots%2Fcant%20move%20into%20a%20x.gif)
+---
 
 
 ## test name
 names
 
 ## test data
-letter should work
+letter should work - valind
 
 ## epsxted reuslat
 any kind of letters should work in any order
 
----![names.gif](..%2F..%2F..%2Fprogramming-commenting-testing%2Fdocs%2Fscreenshots%2Fnames.gif)
+---
 
 
 ## test name
 
+no emtpy name
 
+## test data
+i what it to repet if there nothing in name
+
+## epxted reasult
+it shoul repet what it has siad
+---
+
+
+
+## test name
+bored shows up
+
+## test data
+i what bored to show - valind
+
+## epexted resualt
+bored should come up
+
+---
+
+
+## test name
+cant put letter in right/left 
+
+## test data
+putting in a letter should not work -invaled
+
+## expected resualt
+should just break
+---
+
+## test name
+left work
+
+## test data
+i will put in l and it should move left - valind
+
+## expeted resalut
+it should move left
+
+---
+
+## test name
+right work
+
+## test data
+i will put a r in -valind
+
+
+## expected resalut
+it should move right
+---
 
 
