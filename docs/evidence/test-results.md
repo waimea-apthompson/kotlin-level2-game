@@ -6,122 +6,122 @@ The test results show the actual outcome of the testing, following the [Test Pla
 
 ## Testing if counters can swap
 
-test swap
-### Test Data Used
 
-Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data.
+### Test Data 
 
-### Test Result
+I what to see if it will not swap if square is empty - boundary
+
+### Expected result
 
 ![doing swap1.gif](screenshots/doing-swap1.gif)
 
 
 ---
 
-## Example Test Name
+## Lower and Upper case
 
-lower and upper case
-### Test Data Used
 
-Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data. Details of test data.
+### Test Data 
 
-### Test Result
+I want to show that lower and upper case work - Valid
 
+### Expected result
 ![lower and uppercase.gif](screenshots/lower-and-uppercase.gif)
 
 
 ---
 
-## test name
-cant go witch way if blocked
+## Cant go witch way if blocked
 
-## test data
-i what to see that if i go a way that blocked it wont work
 
-## expeted resault
+## Test data
+I want to see that if i go a way that blocked it wont work - invalid
+
+## Expected result
 
 
 ---![cant go if blocked.gif](screenshots/cant-go-if-blocked.gif)
-it went back to the preson turn
+It went back to the person turn
 
-## test name
-cant move into a x
+## Cant move into a X
 
-## test data
-it must not move into where a x is - boundy
 
-## epxted resualt
+## Test data
+It must not move into where a X is - boundary
+
+## Expected result
 
 
 ---![cant move into a x.gif](screenshots/cant-move-into-a-x.gif)
-it put it back to whos ever trun  it was
+It put it back to who's ever turn  it was
 
-## test name
-names
+## Names
 
-## test data
-letter should work - valind
 
-## epsxted reuslat
+## Test data
+Letter should work - Valid
+
+## Expected result
 
 
 ---![names.gif](screenshots/names.gif)
-any letter in any order works
+Any letter in any order works
 
-## no emtpy name
+## No empty name
 
 
 
-## test data
-i what it to repet if there nothing in name
+## Test data
+I want it to repeat if there nothing in name  - invalid
 
-## epxted reasult
+## Expected result
 
 ---![no empty name.gif](screenshots/no-empty-name.gif)
-it repets what it siad
+It repeats what it siad
 
 
-## test name
-bored shows up
-
-## test data
-i what bored to show - valind
-
-## epexted resualt
+## Bored shows up
 
 
----![bored show up.gif](..%2F..%2F..%2Fprogramming-commenting-testing%2Fdocs%2Fscreenshots%2Fbored%20show%20up.gif)
-the boread show up
+## Test data
+I want bored to show - Valid
 
-## test name
-cant put letter in right/left
+## Expected result
 
-## test data
-putting in a letter should not work -invaled
 
-## expected resualt
+---![bored show up.gif](screenshots/bored-show-up.gif)
+The bored show up
 
----![cant put letter in right or left.gif](..%2F..%2F..%2Fprogramming-commenting-testing%2Fdocs%2Fscreenshots%2Fcant%20put%20letter%20in%20right%20or%20left.gif)
-it broke the game
+## Cant put letter in right/left
+
+
+## Test data
+Putting in a letter should not work -invalid
+
+## Expected result
+
+---![cant put letter in right or left.gif](screenshots/cant-put-letter-in-right-or-left.gif)
+It broke the game
+
 ## Can the counter move left
 
-## test data
-i will put in l and it should move left - valind
+## Test data
+I will put in an L and it should move left - Valid
 
-## expeted resalut
-
-
----![left work.gif](screenshots/)
-i put l in and it worked
-
-## test name
-right work
-
-## test data
-i will put a r in -valind
+## Expected result
 
 
-## expected resalut
+---![left work.gif](screenshots/left-work.gif)
+I put L in and it worked
 
----![right work.gif](..%2F..%2F..%2Fprogramming-commenting-testing%2Fdocs%2Fscreenshots%2Fright%20work.gif)
- i put a r in and it moved to the right
+## Right work
+Right work
+
+## Test data
+I will put an R in -Valid
+
+
+## Expected result
+
+---![right work.gif](screenshots/right-work.gif)
+ I put an R in and it moved to the right
